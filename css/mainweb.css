@@ -1,0 +1,95 @@
+#mainvidio {
+  position: fixed;
+  left: 0px;
+  top: 111px;
+  width: 100%;
+  z-index: -1; }
+
+#main-middle {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #f7f7f7; }
+
+#jiantou {
+  display: block;
+  line-height: 48px;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center; }
+
+#banner {
+  width: 1083px;
+  margin: 0 auto;
+  position: relative;
+  height: 384px; }
+
+#mainpic {
+  padding: 50px 0 30px;
+  width: 95%;
+  margin: 0 auto; }
+  #mainpic a {
+    display: block;
+    line-height: 48px;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center; }
+  #mainpic span {
+    display: block;
+    line-height: 48px;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center; }
+  #mainpic img {
+    width: 100%;
+    height: 384px; }
+
+#nuoxin {
+  width: 95%;
+  padding-bottom: 20px;
+  margin: 0 auto; }
+  #nuoxin h2 {
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+  #nuoxin h4 {
+    border: 1px solid red;
+    width: 50px;
+    margin: 0 auto; }
+  #nuoxin h3 {
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; }
+
+#eachcake {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  padding-bottom: 30px;
+  margin: 0 auto; }
+  #eachcake dl {
+    width: 24%; }
+    #eachcake dl img {
+      width: 100%;
+      height: 184px; }
+  #eachcake dd {
+    width: 100%;
+    height: 60px;
+    overflow: hidden; }
+    #eachcake dd ul {
+      width: 100%; }
+      #eachcake dd ul li {
+        width: 100%;
+        height: 20px;
+        text-align: center; }
+
+#li3 {
+  color: red; }
+
+#footer {
+  width: 95%;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=mainweb.css.map */

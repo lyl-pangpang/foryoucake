@@ -21,7 +21,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: orangered; }
+  color: hotpink; }
 
 em, i, strong, b {
   font-style: normal;
@@ -44,7 +44,11 @@ em, i, strong, b {
   width: 100%;
   position: fixed;
   left: 0px;
-  top: 0px; }
+  top: 0px;
+  z-index: 99;
+  background-color: #f7f7f7; }
+  #header a {
+    color: hotpink; }
 
 #header-top, #header-bottom {
   border: 1px solid #d5d5d5; }
@@ -124,6 +128,9 @@ em, i, strong, b {
   padding-bottom: 34px; }
 
 #footer {
-  background-color: #ebebeb; }
+  background-color: #ebebeb;
+  width: 100%; }
+  #footer a {
+    color: hotpink; }
 
 /*# sourceMappingURL=common.css.map */
