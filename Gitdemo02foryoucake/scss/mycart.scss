@@ -1,0 +1,167 @@
+@charset "utf-8";
+@mixin marginWidth{
+    margin:0 auto;
+    width:78%
+}
+#mycart{
+   
+    #lunbo{ position:relative;padding-top:100px;padding-bottom:20px;
+    #leftbtn{
+                      position: absolute;
+                         top:250px;
+                         left:0px;
+                     display: inline-block;
+                     width:17px;
+                     height:17px;
+                      background:url(../img/one/40.png) no-repeat -69px -117px;
+                      cursor:pointer;
+                 }
+                  #rightbtn{
+                      position: absolute;
+                         top:250px;
+                         left:1130px;
+                     display: inline-block;
+                     width:17px;
+                     height:17px;
+                     cursor: pointer;
+                     background:url(../img/one/40.png) no-repeat -20px -117px;
+                 }
+             }
+    .mycartmiddle{
+        
+        width:90%;
+        margin:0 auto;
+        h2{
+         margin:10px auto;
+         text-align: center;
+         color:#969896;
+        }
+        #lunbomiddlebox{
+            margin: 0 auto;
+            width:1100px;
+            overflow: hidden;
+            position: relative;
+           
+            #huadongbox{position: absolute;
+                         top:0px;
+                         left:0px;
+                         width:3200px;
+                  //padding-bottom:30px;
+                         margin: 0 auto;
+                
+                dl{width:200px;float:left;margin-right:20px;
+        img{
+        width:100%;
+        height:130px;
+      }
+    
+    
+     dd{width:100%;height:60px;
+         ul{width:100%;height:100px;
+         
+            li{width:100%;height:20px;text-align:center;
+            span{line-height:17px;}
+               .needposition{
+                   display: inline-block;
+                  width:17px;
+                  height:17px;
+                  background:url(../img/one/40.png) no-repeat -216px -115px;
+                 margin-left: 5px;
+               }
+            }
+           }
+;      }
+
+    }
+            }
+        }
+    }
+    #gooddetai{
+        width:100%;
+        .beginh2{position: relative;
+            a{margin-left:0;color:#000000;position:absolute;top:0;left: 0;};
+            }
+        #onlygood{
+            width:90%;margin: 0 auto;
+            .box1{
+                #queding{display: block;width:17px;height:17px;border: 1px solid #666666;border-radius: 50%;margin:65px 50px 0 0}
+            }
+           .box2 img{width:200px;height:150px}
+           .box3{margin-left: 40px;
+                 padding-right: 60px;
+                 border-bottom: 1px solid #969896;
+              h4{
+               color:#CCCCCC;   
+              }
+              p{
+                  span{line-height:19px;display:inline-block;vertical-align: middle;};
+                  }
+              #spanduihao{
+                width:17px;height:17px;border: 1px solid #666666;border-radius:50%;border-sizing:border-box;margin-right: 10px;
+                
+              }
+              input{width:200px;height:20px;margin-top:20px;outline: none;border: none;}
+           }
+           .box4{
+               p{text-align: right;color: red;
+                  b{font-size:18px;}
+                  input{width:100px;height:14px;text-align:center;vertical-align:middle;float:left;border:none;outline:none;}
+                  span{width:30px;height:17px;border: 1px solid #666666;display:inline-block;float:left;}
+                  i{font-size:16px;margin-left: 50px;}
+                  #leftjian{ background:url(../img/one/40.png) no-repeat -160px -115px;}
+                  #rightadd{ background:url(../img/one/40.png) no-repeat -110px -116px;}
+                  
+               }
+               .pbottom{margin-top: 108px;}
+           }
+        }
+    }
+}
+#jiesuan{
+    position: fixed;
+    bottom:0px;
+    left:0px;
+    z-index: 50;
+    width:100%;
+    background-color:#ffffff;
+    
+    .left{width:40%;
+        margin-left: 100px;
+        i{color: red;margin:0 10px;}
+        #leftptuihao{
+            display: inline-block;width:17px;height:17px;border:1px solid #CCCCCC;border-radius: 50%;
+             
+             margin-right: 20px;
+        }
+        span{ display: inline-block;
+            line-height:80px;
+            font-size:18px;
+           }
+    }
+    .right{width:40%;text-align: right;
+         margin-right: 100px;
+         
+         span{ display: inline-block;
+            line-height:80px;
+            font-size:18px;
+        }
+        .iconfont{
+            color: red;
+        }
+        #allmoney{
+            color:red;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        a{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left:50px;
+            line-height:50px;
+            width:200px;
+            background-color: red;
+            color: #ffffff;
+            text-align:center ;
+        }
+    }
+}

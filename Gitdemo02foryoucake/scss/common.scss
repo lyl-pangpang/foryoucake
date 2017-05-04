@@ -1,0 +1,41 @@
+@charset "utf-8";
+html, body, ul, li, dl, dd, dt, p, h1, h2, h3, img,span{ margin:0; padding:0; }
+ img { border:none;display:block;}
+ul, ol{ list-style:none; }
+html{width:100%}
+body {font:12px "微软雅黑";width:100%;}
+a {text-decoration:none;
+       &:hover{color:red;}
+    
+}
+
+em,i,strong,b{font-style: normal;font-weight: normal;}
+.left{float:left}
+.right{float:right}
+.clear:after{content:"";display:block;clear:both;height:0;overflow:hidden}
+#header{width:100%;position:fixed;left:0px;top:0px;z-index:10;background-color:#f7f7f7;}
+#headermiddletwo .hearderul a{color:black}
+#headermiddletwo .hearderul a:hover{color:red}
+#header-top,#header-bottom{border:1px solid #d5d5d5;}
+#headermiddleone,#headermiddletwo{width:98%;margin:0 auto;}
+#headermiddleone span,#headermiddleone li{line-height:28px;font-size:12px;}
+#headermiddleone li{margin-left:26px;position:relative;}
+#header-bottom .hearderul li{float:left;width:112px;}
+#header-bottom a,#header-bottom strong{line-height:78px;text-aline:center;}
+#header-bottom .headerimg{padding-top:32px;width:340px;}
+#header-bottomright .bottomrightA{padding-right:34px;color:red}
+#shopCarCount{border-radius:50%;background-color:#fd4f00;}
+#footer1{margin:0 auto;width:150px;padding:40px 0 36px;}
+#footer1 a{display:block;text-align:center;}
+#footer1 p{float:left;}
+#theonep{padding-right:68px;}
+#footer2{width:400px;margin:0 auto;padding-bottom:26px;}
+#footer3 a{display: inline-block;width:90px;border-right:1px solid #d5d5d5;text-align:center;}
+#footer3 .iconfont{border-right:none;}
+#footer3 {width:680px;margin:0 auto;padding-bottom:34px;}
+#footer4 {width:650px;margin:0 auto;padding-bottom:34px;}
+#footer5 {width:380px;margin:0 auto;padding-bottom:34px;}
+#footer{background-color:#ebebeb;width:100%;
+    a{color:hotpink;}
+    
+}

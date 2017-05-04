@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+	<head>
+		<title>表单验证</title>
+		<meta charset = "utf-8"/>
+	    <style>
+		    body{font-size:12px;
+			    }
+		    form{border:10px double pink;
+			     background-color:#f3f3f3;
+				 width:800px;
+				 height:300px;
+				 padding-top:40px;
+				 }
+			 div{width:600px;
+			     margin:0 auto;
+				}
+			input{
+			     box-shadow:5px 5px #f3f3f3;
+				 box-shadow:-5px -5px #f3f3f3;
+			     }
+    #authcodeshow{
+			      border:1px solid pink; 
+			     }
+		</style>
+	</head>
+    <body>
+	    <form>
+		   
+	            <div>　登录账号:<input type="text" id="loginname" /><span id="showlogin"></span></div></br>
+			    <div>　　　密码:<input type="password" id="loginpass"/><span id="showpass">密码由26个字母组成(区分大小写),或由数字组成.</span></div></br>
+			    <div>　确认密码:<input type="password" id="againloginpass"/><span id="againshowpass"></span></div></br>
+	
+			    <div>　　联系人:<input type="text" id="contactID"/><span id="showcontactID"></span></div></br>
+		        <div>　　　手机:<input type="text" id="mobliephone"/><span id="showmobliephone"></span></div></br>
+		        <div>　　　邮箱:<input type="text" id="emaliId"/><span id="showemaliId"></span></div></br>
+				<div>　　验证码:<input type="text" id="authcode"/><input id="getauthcode" value="获取验证码" type="button"/><span id="authcodeshow"></span><span id="randomcode"></span></div></br>
+		</form>
+	
+    </body>
+</html>
+<script type="text/javascript" src="obj.js"></script>
+<script type="text/javascript">
+    window.onload=function(){
+	    getElement("loginname").onblur=function(event){  
+			var str=getElement("loginname").value;
+			var reg=/[\u4e00-\u9fa5]/g;
+			if(reg.test(str)==true){
+			    getElement("showlogin").innerHTML="√";
+			}else{
+			    getElement("loginname").value="";
+			    getElement("showlogin").innerHTML="×"+",用户名只能是中文,并且不能为空哦";
+			}
+            
+        }
+		var strpass;
+		
+		getElement("loginpass").onblur=function(event){
+		     strpass=getElement("loginpass").value;
+			var reg=/[0-9a-zA-Z]/g;
+			if(reg.test(strpass)==true){
+			    getElement("showpass").innerHTML="√";
+			}else{
+			    getElement("showpass").innerHTML="×"+"密码必填哦";
+			}
+		}
+		getElement("againloginpass").onblur=function(event){
+			var againstr=getElement("againloginpass").value
+			if(strpass==againstr){
+			    getElement("againshowpass").innerHTML="√";
+			}else{
+			    getElement("againloginpass").value="";
+			    getElement("againshowpass").innerHTML="×"+"请确认密码一致并且不能为空哦";
+			}
+		}
+		getElement("mobliephone").onblur=function(event){
+			var str=getElement("mobliephone").value;
+			var reg=/^1[35784]\d{9}$/;
+			if(reg.test(strphone)==true){
+			    getElement("showmobliephone").innerHTML="√";
+			}else{
+			    getElement("showmobliephone").innerHTML="×"+"密码必填哦";
+			}
+		}
+		$("emaliId").onblur=function(event){
+		    var str=getElement("emaliId").value;
+			var reg=/^\w+@\w+\.(com|net|cn|com\.cn)$/;
+			if(reg.test(str)==true){
+			   getElement("showemaliId").innerHTML="√";
+			}else{
+			   getElement("showemaliId").innerHTML="×";
+			}
+		}
+		    var arr=[];
+			for(var i=0;i<=9;i++){
+			    arr.push(String(i))    
+		
+            }
+			for(var i=97;i<=122;i++){
+			    arr.push(String.fromCharCode(i))    
+		
+            }
+			for(var i=65;i<=90;i++){
+			    arr.push(String.fromCharCode(i))    
+		
+            }
+			var strauth
+		getElement("getauthcode").onclick=function(event){
+		     var arr=[];
+			for(var i=0;i<=9;i++){
+			    arr.push(String(i))    
+		
+            }
+			for(var i=97;i<=122;i++){
+			    arr.push(String.fromCharCode(i))    
+		
+            }
+			for(var i=65;i<=90;i++){
+			    arr.push(String.fromCharCode(i))    
+		
+            }
+            strauth=""
+			for(var i=0;i<4;i++){
+			    var index=parseInt(Math.random()*arr.length);
+				strauth+=arr[index];
+			}
+		    getElement("authcodeshow").innerHTML=strauth;
+			
+        }
+		getElement("authcode").onblur=function(event){
+		     var str=getElement("authcode").value;
+			 var reg=new RegExp(eval("/"+strauth+"/ig"));
+			 if(reg.test(str)==true){
+			   
+			    getElement("randomcode").innerHTML="√";
+			 }else{
+			    getElement("randomcode").innerHTML="×"+"请重新输入";
+			 }
+			 
+			 
+		}
+}
+function getElement(name){
+    var obj=document.getElementById(name);
+    return obj;
+}
+</script>
+
