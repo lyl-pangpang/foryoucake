@@ -13,7 +13,18 @@ gulp.task("copemycake1",function(){
 	
 })
 
-
+gulp.task("copemycake2",function(){
+	gulp.src("*").pipe(gulp.dest("Gitdemo02foryoucake"))
+	gulp.src("css/*").pipe(gulp.dest("Gitdemo02foryoucake/css"))
+	gulp.src("font/*").pipe(gulp.dest("Gitdemo02foryoucake/font"))
+	gulp.src("html/*").pipe(gulp.dest("Gitdemo02foryoucake/html"))
+	gulp.src("img/one/*").pipe(gulp.dest("Gitdemo02foryoucake/img/one"))
+	gulp.src("js/*").pipe(gulp.dest("Gitdemo02foryoucake/js"))
+	gulp.src("scss/*").pipe(gulp.dest("Gitdemo02foryoucake/scss"))
+	gulp.src("vidio/*").pipe(gulp.dest("Gitdemo02foryoucake/vidio"))
+	gulp.src("php/*").pipe(gulp.dest("Gitdemo02foryoucake/php"))
+	
+})
 gulp.task("watchall",function(){
-	gulp.watch(["*","css/*","font/*","html/*","img/one/*","js/*","scss/*","vidio/*","php/*"],["copemycake1"]);
+	gulp.watch(["*","css/*","font/*","html/*","img/one/*","js/*","scss/*","vidio/*","php/*"],["copemycake1","copemycake2"]);
 });
