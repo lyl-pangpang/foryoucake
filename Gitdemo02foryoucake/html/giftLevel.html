@@ -39,9 +39,10 @@
 				    	<img src="../img/one/logo.png">
 				    </div>
 				    <ul class="hearderul left">
-                         <li><a href="#">首页</a></li>
-                         <li><a href="#">蛋糕</a></li>
-                         <li><a href="#" id="liping">礼品</a></li>
+				    	 <li><a href="mainweb.html">首页</a></li>
+                         <li><a href="secondLevel.html">蛋糕</a></li>
+                         <li><a href="giftLevel.html" id="liping">礼品</a></li>
+                         
                          <li id="leader11">
                          	<a href="#">企业专区</a>
                          	<div id="leader1">
@@ -206,7 +207,18 @@
     "use strict";
     
 	$(function(){
-		
+//		let userlogo = getCookie("userkey");
+//		if(userlogo!=""){
+//		$("#logozhuce").html(userlogo+",欢迎你来到诺心！");
+//		$("#logozhuce").append("<a href='mainweb.html' id='tuichu'>退出登录</a>")
+//		$("#logozhuce").attr("href","javescript:void(0)")
+//		
+//		}
+//		$("#tuichu").live("click",function(){
+//			removeCookie("userkey");
+//			$("#tuichu").html("");
+//			$("#logozhuce").html("登录/注册");
+//		})
         $("#cityId").live("click",function(){
 			
 			$("#showbox").css("display","block")

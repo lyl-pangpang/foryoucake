@@ -14,7 +14,7 @@
 		
 </head>
 	<body>
-		//<a href="thirdlevel1.html?goodsId=123">aaa</a>
+		
 	<!------------------------header---------------------------------------->	
 		<div id="header" class="header">
 			<div id="header-top" class="clear">
@@ -37,9 +37,9 @@
 				    	<img src="../img/one/logo.png">
 				    </div>
 				    <ul class="hearderul left">
-                         <li><a href="#">首页</a></li>
-                         <li><a href="#" id="dangao">蛋糕</a></li>
-                         <li><a href="#">礼品</a></li>
+                          <li><a href="mainweb.html" id="shouye">首页</a></li>
+                         <li><a href="secondLevel.html" id="dangao">蛋糕</a></li>
+                         <li><a href="giftLevel.html">礼品</a></li>
                          <li id="leader11">
                          	<a href="#">企业专区</a>
                          	<div id="leader1">
@@ -188,6 +188,18 @@
     "use strict";
     
 	$(function(){
+//		let userlogo = getCookie("userkey");
+//		if(userlogo!=""){
+//		$("#logozhuce").html(userlogo+",欢迎你来到诺心！");
+//		$("#logozhuce").append("<a href='mainweb.html' id='tuichu'>退出登录</a>")
+//		$("#logozhuce").attr("href","javescript:void(0)")
+//		
+//		}
+//		$("#tuichu").live("click",function(){
+//			removeCookie("userkey");
+//			$("#tuichu").html("");
+//			$("#logozhuce").html("登录/注册");
+//		})
 		
         $("#cityId").live("click",function(){
 			
@@ -319,7 +331,8 @@
 	 		var str="<dl id='"+goods[i].goodsId+"'><dt><img src='"+goods[i].goodsDesc+"'/></dt><dd><ul><li>"+goods[i].goodsName+"</li><li>"+goods[i].goodsType+"</li><li id='li3' class='iconfont icon-renminbi'>"+goods[i].goodsPrice+"</li><li>建议食用人数2-4人食</li><li id='li5'><a href='#'>加入购物车</a></li></ul></dd></dl>"
 	 		$("#eachcake").append(str);
 	 	}
-	 })
+	 });
+	  
 	
 });
 

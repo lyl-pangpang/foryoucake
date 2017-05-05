@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css">
 		<link rel="stylesheet" type="text/css" href="../css/common.css">
 		<link rel="stylesheet" type="text/css" href="../css/mainweb.css">
+		<link rel="stylesheet" type="text/css" href="../css/showdow.css">
 	</head>
 	<style type="text/css">
 		#header #headermiddletwo #shouye{
@@ -36,8 +37,8 @@
 				    </div>
 				    <ul class="hearderul left">
                          <li><a href="#" id="shouye">首页</a></li>
-                         <li><a href="#">蛋糕</a></li>
-                         <li><a href="#">礼品</a></li>
+                         <li><a href="secondLevel.html">蛋糕</a></li>
+                         <li><a href="giftLevel.html">礼品</a></li>
                          <li id="leader11">
                          	<a href="#">企业专区</a>
                          	<div id="leader1">
@@ -193,8 +194,8 @@
 			    	</dl>
 			    </div> 
 			    <div id="more">
-			    	<a href="">更多蛋糕</a>
-			    	<a href="">more+</a>
+			    	<a href="secondLevel.html">更多蛋糕</a>
+			    	<a href="secondLevel.html">more+</a>
 			    </div>
 			    <div id="footer"></div>
 			</div>
@@ -227,6 +228,50 @@
 				</p>
 			   </div>
 		</div>
+		
+		
+		<div id="showbox1"></div>
+		<div id="showboxmiddle1div">
+		<div id="showboxmiddle3">
+			     	<div id="box1-2">
+		   		<p class="clear"><span class="left">加入购物车</span><span id="chachashow" class="right"></span></p>
+		   		<ul class="ul1 clear" id="ul111">
+		   			<li id="ul1-li11" class="weiyi">2-4人食</li>
+		   			<li id="ul1-li12">5-8人食</li>
+		   			<li id="ul1-li13">10-12人食</li>
+		   			<li id="ul1-li14">15-20人食</li>
+		        </ul>
+		        <p class="p2">
+		       <span id="goodsming">巧克力当巧克力千克</span>
+		       <span id="goodsdrec">&nbsp;&nbsp;le chenga shei shei</span>
+		       <span class="iconfont icon-renminbi right" id="prices">218</span>
+		        </p>
+		   		<ul class="ul2 clear" id="ul222">
+		   			<li class="pli1"><span class="span1">&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="canju">含5套餐具</span></li>
+		   		    <li class="pli2"><span class="span2">&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="cichun">约13*13cm</span></li>
+		   		    <li class="pli3"><span class="span3">&nbsp;&nbsp;&nbsp;&nbsp;</span><span>约450g</span></li>
+		   		    <li class="pli4"><span>甜度</span><span class="span4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li>
+		   		</ul>
+		   		
+		        <div>
+		        	<span id="maimai">加入购物车+</span>
+		        	
+		        </div>
+		   	</div>
+		</div>
+		</div>
+		<div id="showboxmiddle2">
+			<div class="box1-2">
+		   		<p class="clear"><span class="left">提示信息</span><span id="chachashow2" class="right"></span></p>
+		   		<p class="succful">添加购物车成功</h2>
+		        <div>
+		        	<span id="jiesuan">去结算</span>
+		        	
+		        </div>
+		   	</div>
+		</div>
+		
+		
 		<a  id="QRcode" href="javescript:void(0)">
 			<img src="../img/one/erweima.png"/>
 		</a>
@@ -395,7 +440,7 @@
 			function(){
 				$("#main-middle").animate(  
 				    {
-						top:"900px",
+						top:"850px",
 				    },
 				    1000,
 				    function(){
@@ -445,7 +490,45 @@
 	 	}
 	 );
 	 
-	
+	 $("#eachcake").delegate("dl","click",function(){
+	 	//console.log("hah")
+	       var that=this;
+	 		$.get("../getGoodsList.php",function(data){
+	 	var allgoods=eval("("+data+")");
+	 	
+	 	   
+	 	for(var i=0;i<allgoods.length;i++){
+	 		if(that.id==allgoods[i].goodsId){
+	 			$("#showbox1").css("display","block");
+	 			$("#showboxmiddle3").css("display","block");
+	 			$("#goodsming").html(allgoods[i].goodsName);
+	 			$("#goodsdrec").html(allgoods[i].goodsType);
+	 			$("#prices").html(allgoods[i].goodsPrice)
+	 			//console.log(allgoods)
+	 			$("#ul111 li").on("click",{"id":allgoods[i]},function(e){
+	 				//console.log(e.data.id);
+	 		       // this.style.backgroundColor="red";
+	 		      //  var index=$("#ul111").index(this)+1;
+	 		      var index = $(this).index()+1;
+	 		      
+	 		      var beiyong = "beiyong"+index;
+	 		      //console.log(allgoods[i]);
+	 			$("#prices").html(e.data.id[beiyong]);
+	 		        
+	 			})
+	 			$("#chachashow").on("click",function(){
+	 				$("#showbox1").css("display","none");
+	 			    $("#showboxmiddle3").css("display","none");
+	 			})
+	 		}
+	 	}
+	 	
+	 	
+	 	
+	 });
+	 	}
+	 );
+	 
 
 });
 
